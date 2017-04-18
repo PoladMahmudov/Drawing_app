@@ -1,0 +1,29 @@
+<template name="gallery">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="list-group">
+			{{#each titles}}
+			  <a href="/gallery/{{_id}}" class="list-group-item" id="{{_id}}">
+			    {{title}}
+			  </a>
+			 {{/each}}
+			</div>
+		</div> <!-- /.col-->
+		<div class="col-md-8">
+			{{>canvas2}}
+		</div>
+	</div> <!-- /.row -->
+</div>
+</template>
+
+<template name="canvas2">
+	<div class="page-header">
+	<div class="alert alert-info" role="alert"><span class='glyphicon glyphicon-info-sign'></span> dbclick on the title to rename</div>
+	{{#with inform}}
+	  <h1>{{> editableText collection="gallery" field="title"}}</h1>
+	 {{/with}}
+	</div>
+		<div id="canvas2"></div>  <!-- /.canvas2 -->
+
+</template>

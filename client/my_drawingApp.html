@@ -1,0 +1,69 @@
+<template name="wall">
+	<div class="container main">
+		<div class="panel panel-info">
+		  	<div class="panel-heading">
+			  	Canvas
+			</div>
+		  <div class="panel-body row-main">
+		  	<div class="row">
+				<div class="col-md-8 thumbnail">
+					{{> canvas}}
+				</div>
+				<div class="col-md-4">
+					<div class="jumbotron">
+					<div class="thumbnail" id="palitra">
+					<h4 align="center">Tolls</h4>
+					<div align="center">
+						<div class="btn-group" role="group" aria-label="ToolBar">
+						<button type="button" class="btn btn-default js-line">Line</button>
+						<button type="button" class="btn btn-default js-rec">Rect</button>
+						<button type="button" class="btn btn-default js-circle">Circle</button>
+						</div> 
+						</div>
+						</div> 
+
+						<br> <br>
+						<div align="center">
+						<button class="btn btn-default btn-lg js-brush">Wipe</button> 	
+						</div>
+						<br> <br>
+						<div class="thumbnail" id="palitra" align="center">
+						 <div data-role="main" class="ui-content">
+						    <form method="post" action="demoform.asp" id="sliderNum">
+						      <label for="points">Thickness</label>
+						      <input type="range" name="points" id="points" value="3" min="0" max="50" data-show-value="true"> <br>
+						      <input type="submit" data-inline="true" value="Submit" class="btn btn-default">
+						    </form>
+						  </div>
+						 </div>
+						<br>
+						
+	  					<div align="center">
+	  					<form class="demo_form">
+	  					<div class="input-group">
+					      <input type="text" class="color-picker" placeholder="Select the color" name="color"> <!-- color picker -->
+					      <span class="input-group-btn">
+					        <button class="btn btn-info btn-sm" type="submit">Select</button>
+					      </span>
+					    </div><!-- /input-group -->
+						</form>
+						</div>
+						</div>
+					</div> <!-- / jumbotron -->
+				</div> <!-- / col -->
+			</div> <!-- / row -->
+		  </div>
+		  <div class="panel-footer">
+
+  			<button class='btn-danger btn-lg clear'>New Canvas</button>
+  			<button class='btn-success btn-lg' id="js-save">Save</button>
+
+		  </div>
+
+	</div> <!-- /container -->	
+	
+</template>
+
+<template name="canvas">
+	<div id="canvas"></div>	
+</template>
